@@ -1,0 +1,8 @@
+{
+  "JWT_SECRET": "1234",
+  "DB_USER": "demo_crud_dev",
+  "DB_PASSWORD": "demo111",
+  "DB_HOST": "127.0.0.1",
+  "DB_PORT": 5432,
+  "DB_NAME": "demo_crud"
+}
