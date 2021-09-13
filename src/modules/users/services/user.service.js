@@ -5,7 +5,7 @@ async function uniqueCheckCreate(colName, value) {
     try {
         await db.query('BEGIN');
         const queryText = 'select count(username) as flag from users where ' + colName + ' = $1';
-        console.log(queryText);
+        //console.log(queryText);
         const result = await db.query(queryText, [value]);
         await db.query('COMMIT');
         return result.rows[0].flag;
