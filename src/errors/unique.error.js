@@ -4,9 +4,8 @@ class UniqueCheckError extends CustomError {
     statusCode = 400;
 
     constructor(errors) {
-        super(errors);
+        super("unique checking");
         this.errors = errors;
-        console.log(this.errors)
         Object.setPrototypeOf(this, UniqueCheckError.prototype);
     }
 

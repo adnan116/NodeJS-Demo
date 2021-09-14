@@ -7,7 +7,7 @@ const validates = (req, res, next) => {
     //console.log(errors);
     if (!errors.isEmpty()) {
         throw new RequestValidationError(errors.array());
-    }
+    }  
     next();
 }
 

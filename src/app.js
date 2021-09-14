@@ -29,10 +29,7 @@ process.on("uncaughtException", (err) => {
 // });
 
 app.use(cors());
-
 userModule.init(app);
-
-
 app.use(errorHandler);
 
 
