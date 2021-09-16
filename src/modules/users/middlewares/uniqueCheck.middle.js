@@ -12,7 +12,12 @@ const unique = async (req, res, next) => {
     }else if(uniqueMobile > 0){
         err = new Error("Mobile number is not unique. It already exists");
     }
-    next(new UniqueCheckError(err.message));
+
+    if(err){
+        next(new UniqueCheckError(err.message));
+    }else{
+        next();  
+    }
 }
 
 module.exports = {
